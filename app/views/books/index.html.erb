@@ -8,8 +8,8 @@
 		<tr>
 			<td><%= book.title %></td>
 			<td><%= book.body %></td>
+			<td><%= link_to "Show",book_path(book) %></td>
 			<td>Edit</td>
-			<td>Show</td>
 			<td>Destroy</td>
 		</tr>
 	<% end %>
