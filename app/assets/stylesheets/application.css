@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+* {
+	margin: 10px;
+}
+
+.content {
+	margin: 30px;
+}
+
+.error_message {
+	color: red;
+}
+
+.flash {
+	color: green;
+}
+
+.bar p{
+	display: inline-block;
+	margin: 0 5px;
+}
