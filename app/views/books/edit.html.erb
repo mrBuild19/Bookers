@@ -1,11 +1,21 @@
 <h1>Editing Book</h1>
+<% if @book.errors.any? %>
+	<h4><%= @book.errors.count %> error prohibited this book from being saved: </h4>
+	<ul>
+		<% @book.errors.full_messages.each do |message| %>
+			<div class="form-error">
+				<%= message %>
+			</div>
+		<% end %>
+	</ul>
+<% end %>
+
+
 <%= form_for(@book) do |f| %>
 	<p>Title</p>
 	<%= f.text_field :title %>
-
 	<p>Body</p>
 	<%= f.text_area :body %>
-
 	<br><%= f.submit 'Update Book' %></br>
 <% end %>
 
